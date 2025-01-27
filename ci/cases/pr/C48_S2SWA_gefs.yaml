@@ -9,7 +9,7 @@ arguments:
   resdetocean: 5.0
   resensatmos: 48
   nens: 2
-  gfs_cyc: 1
+  interval: 24
   start: cold
   comroot: {{ 'RUNTESTS' | getenv }}/COMROOT
   expdir: {{ 'RUNTESTS' | getenv }}/EXPDIR
@@ -18,4 +18,4 @@ arguments:
   yaml: {{ HOMEgfs }}/ci/cases/yamls/gefs_defaults_ci.yaml
 
 skip_ci_on_hosts:
-  - wcoss2
+  - None
