@@ -34,7 +34,7 @@ local OUTPUT_HISTORY=${OUTPUT_HISTORY:-".true."}
 if [[ "${DO_JEDIATMVAR:-}" == "YES" ]]; then
   local HISTORY_FILE_ON_NATIVE_GRID=".true."
 else
-  local HISTORY_FILE_ON_NATIVE_GRID=".false."
+  local HISTORY_FILE_ON_NATIVE_GRID=".true."
 fi
 local WRITE_DOPOST=${WRITE_DOPOST:-".false."}
 local WRITE_NSFLIP=${WRITE_NSFLIP:-".false."}

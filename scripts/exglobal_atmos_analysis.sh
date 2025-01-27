@@ -86,7 +86,7 @@ SENDDBN=${SENDDBN:-"NO"}
 RUN_GETGES=${RUN_GETGES:-"NO"}
 GETGESSH=${GETGESSH:-"getges.sh"}
 export gesenvir=${gesenvir:-${envir}}
- 
+
 export hofx_2m_sfcfile=${hofx_2m_sfcfile:-".false."}
 
 # Observations
@@ -930,6 +930,10 @@ cat gsiparm.anl
 export OMP_NUM_THREADS=${NTHREADS_GSI}
 export pgm=${GSIEXEC}
 . prep_step
+
+# Pretend to throw an error
+echo "STAGING STAGING STAGING"
+exit 1
 
 ${NCP} ${GSIEXEC} ${DATA}
 ${APRUN_GSI} ${DATA}/$(basename ${GSIEXEC}) 1>&1 2>&2
